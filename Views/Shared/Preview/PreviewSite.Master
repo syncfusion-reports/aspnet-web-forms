@@ -1,0 +1,92 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PreviewSite.Master.cs" Inherits="ReportsWebFormsSamples.PreviewSiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en" style="height: 100%; width: 100%;">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Report samples">
+    <title>Reports for ASP.NET Webforms | Syncfusion</title>
+    <script>
+        function validateBrowser() {
+            var uaValidate = navigator.userAgent.match(/(MSIE |Trident.*rv[ :])([0-9]+)/);
+            if (uaValidate != null)
+                return uaValidate[2];
+            return null;
+        }
+        var ieVer = validateBrowser();
+        if (ieVer != null && ieVer < 11) {
+            if (!location.origin) {
+                location.origin = window.location.protocol + "//" + window.location.hostname + (window.location.port ? ':' + window.location.port : '');
+                location.href = location.origin + '/error.html';
+            }
+        }
+    </script>
+    <link rel="shortcut icon" href="../favicon.ico" />
+    <link href="<%=Page.ResolveUrl("~/Content/css/ej/material/ej.reports.all.min.css")%>" rel="stylesheet" />
+    <link href="<%=Page.ResolveUrl("~/favicon.ico")%>" rel="shortcut icon" type="image/x-icon" />
+    <link href="<%=Page.ResolveUrl("~/Content/css/ej/material/ej.reportdesigner.min.css")%>" rel="stylesheet" />
+    <link href="<%=Page.ResolveUrl("~/Content/css/common/common.css")%>" rel="stylesheet" />
+    <link href="<%=Page.ResolveUrl("~/Scripts/extensions/report-item-extensions/barcode.css")%>" rel="stylesheet">
+    <script src="<%=Page.ResolveUrl("~/Scripts/extensions/report-item-extensions/barcode.js")%>"></script>
+    <script src="<%=Page.ResolveUrl("~/Scripts/extensions/report-item-extensions/qrbarcode.js")%>"></script>
+    <script src="<%=Page.ResolveUrl("~/Scripts/dependent/jquery.min.js")%>"></script>
+    <script src="<%=Page.ResolveUrl("~/Scripts/dependent/jsrender.min.js")%>"></script>
+    <script src="<%=Page.ResolveUrl("~/scripts/ej/common/ej.reporting.common.min.js")%>"></script>
+    <script src="<%=Page.ResolveUrl("~/scripts/ej/common/ej.reporting.widgets.min.js")%>"></script>
+    <script src="<%=Page.ResolveUrl("~/Scripts/ej/ej.report-viewer.min.js")%>"></script>
+    <script src="<%=Page.ResolveUrl("~/scripts/ej/common/ej.report-designer-widgets.min.js")%>"></script>
+    <script src="<%=Page.ResolveUrl("~/Scripts/ej/ej.report-designer.min.js")%>"></script>
+
+    <script src="<%=Page.ResolveUrl("~/Scripts/ej/data-visualization/ej.bulletgraph.min.js")%>"></script>
+    <script src="<%=Page.ResolveUrl("~/Scripts/ej/data-visualization/ej.chart.min.js")%>"></script>
+    <script src="<%=Page.ResolveUrl("~/Scripts/ej/data-visualization/ej.circulargauge.min.js")%>"></script>
+    <script src="<%=Page.ResolveUrl("~/Scripts/ej/data-visualization/ej.lineargauge.min.js")%>"></script>
+    <script src="<%=Page.ResolveUrl("~/Scripts/ej/data-visualization/ej.map.min.js")%>"></script>
+
+    <script src="<%=Page.ResolveUrl("~/Scripts/dependent/codemirror.js")%>"></script>
+    <script src="<%=Page.ResolveUrl("~/Scripts/dependent/show-hint.js")%>"></script>
+    <script src="<%=Page.ResolveUrl("~/Scripts/dependent/sql-hint.js")%>"></script>
+    <script src="<%=Page.ResolveUrl("~/Scripts/dependent/sql.js")%>"></script>
+    <script src="<%=Page.ResolveUrl("~/Scripts/dependent/vb.js")%>"></script>
+    <link href="<%=Page.ResolveUrl("~/Content/css/dependent/codemirror.css")%>" rel="stylesheet" />
+    <link href="<%=Page.ResolveUrl("~/Content/css/dependent/show-hint.css")%>" rel="stylesheet" />
+</head>
+<body>
+    <form runat="server">
+        <div class="splash">
+            <div class="message">ASP.NET Webforms Reports</div>
+            <div class="loader">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+            </div>
+        </div>
+        <style>
+            body, form, .ej-body {
+                height: 100%;
+                margin: 0;
+                width: 100%;
+                overflow: hidden;
+            }
+        </style>
+        <div class="ej-body e-hidden">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <script>
+            function getSampleData() {
+            return <%= sampledata %>;
+            }
+
+            function getBasePath() {
+                return "<%= Page.ResolveUrl("~/") %>";
+            }
+        </script>
+        <script src="<%=Page.ResolveUrl("~/Scripts/common/global.js")%>"></script>
+        <script src="<%=Page.ResolveUrl("~/Scripts/common/preview.js")%>"></script>
+    </form>
+</body>
+</html>
