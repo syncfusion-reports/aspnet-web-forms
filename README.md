@@ -1,17 +1,17 @@
 # Syncfusion ASP.NET WebForms Reports samples
 
-This Syncfusion ASP.NET WebForms Reports samples repository contains the  the `Report Viewer` and `Report Designer` samples. It Empower your web application with feature-rich report preview, edit, and customization capabilities that allow you to explore data easily and make real-time decisions. Effortlessly print and export reports.
+This Syncfusion ASP.NET WebForms Reports samples repository contains the  the `Report Viewer` and `Report Designer` samples. It empower your web application with feature-rich report preview, edit, and customization capabilities that allow you to explore data easily and make real-time decisions. Effortlessly print and export reports.
 
 This section guides you to use the Syncfusion ASP.NET WebForms Reports samples in your applications.
 
-* [Requirements to run the service](#requirements-to-run-the-service)
+* [Requirements to run the demo](#requirements-to-run-the-demo)
 * [Using the Reporting Samples](#using-the-reporting-samples)
 * [Online Demos](#online-demos)
 * [Documentation](#documentation)
 * [License](#license)
 * [Support and Feedback](#support-and-feedback)
 
-## Requirements to run the service
+## Requirements to run the demo
 
 The samples requires the below requirements to run.
 
